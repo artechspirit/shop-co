@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui";
 
 const config: Config = {
   content: [
@@ -8,12 +9,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        integral: ["Integral CF", "sans-serif"],
+        satoshi: ["Satoshi", "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "shopco-black-60": "#00000099",
+        "shopco-black-40": "#00000066",
+        "shopco-black-10": "#0000001A",
+        "shopco-red-100": "#FF3333",
+        "shopco-red-10": "#FF33331A",
       },
     },
   },
-  plugins: [],
+  plugins: [daisyui],
 };
 export default config;
